@@ -1,0 +1,9 @@
+timestamp,name,cv_r2,params,n_features,notes
+2026-05-29T21:31:13.315418,lgb_baseline,0.7795543105364062,,0,"log1p target, temporal split"
+2026-05-29T21:31:15.516536,cb_baseline,0.792142845811106,,0,"log1p target, temporal split"
+2026-05-29T21:31:16.858590,xgb_baseline,0.7729814661278116,,0,"log1p target, temporal split"
+2026-05-29T21:33:08.583286,lgb_tuned,0.8088068935863986,"{""learning_rate"": 0.08969937327551715, ""num_leaves"": 384, ""max_depth"": 6, ""min_child_samples"": 100, ""feature_fraction"": 0.8780084741358357, ""bagging_fraction"": 0.7181445311057721, ""bagging_freq"": 5, ""lambda_l1"": 0.04536154765282769, ""lambda_l2"": 0.00415057588483349}",54,Optuna 100 trials
+2026-05-29T21:35:55.922795,cb_tuned,0.8567241130029756,"{""learning_rate"": 0.06392036003886044, ""depth"": 5, ""l2_leaf_reg"": 0.19756932009244968, ""min_data_in_leaf"": 29, ""random_strength"": 9.944355458065958, ""bagging_temperature"": 0.4125794454471587}",54,Optuna 60 trials
+2026-05-29T21:37:31.395920,xgb_tuned,0.8701539746712663,"{""max_depth"": 9, ""eta"": 0.0905666457439446, ""subsample"": 0.8362076290500097, ""colsample_bytree"": 0.5002016573666211, ""min_child_weight"": 32, ""lambda"": 0.2956130344724689, ""alpha"": 0.00228985872937725, ""gamma"": 2.111789094018542}",54,Optuna 80 trials
+2026-05-29T21:37:31.786953,ensemble_tuned,0.8701539746712663,"{""lgb"": 0.0, ""cb"": 0.0, ""xgb"": 1.0}",54,Weighted avg of tuned models
+2026-05-29T21:37:50.034321,final_ensemble,0.8657662936281825,"{""lgb"": 0.0, ""cb"": 0.0, ""xgb"": 1.0}",54,"Seed avg ([42, 123, 456, 789, 2024]), weighted ensemble"
